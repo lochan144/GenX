@@ -29,10 +29,4 @@ Welcome to the GenX Reality landing page repository. This project showcases a mo
 - **Font Awesome:** Icon library for adding scalable vector icons.
 - **Google Fonts:** Custom web fonts for enhanced typography.
 
-## Getting Started
 
-To get a local copy up and running, follow these simple steps:
-
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/lochan144/GenX.git
