@@ -1,0 +1,1230 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="34d08bed-a471-4b25-ab66-313999e7add8" data-section-id="34d08bed-a471-4b25-ab66-313999e7add8">
+
+<htmlCode>
+<div id="root">
+    <nav id="navbar" class="fixed w-full bg-neutral-900/90 backdrop-blur-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-[#00FF00] font-bold text-xl">GenX Reality</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-300 hover:text-[#00FF00] px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#innovations" class="text-gray-300 hover:text-[#00FF00] px-3 py-2 rounded-md text-sm font-medium transition-colors">Innovations</a>
+                        <a href="#howitworks" class="text-gray-300 hover:text-[#00FF00] px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
+                        <a href="#futurevision" class="text-gray-300 hover:text-[#00FF00] px-3 py-2 rounded-md text-sm font-medium transition-colors">Future Vision</a>
+                        <a href="#joinus" class="text-gray-300 hover:text-[#00FF00] px-3 py-2 rounded-md text-sm font-medium transition-colors">Join Us</a>
+                        <a href="#contact" class="bg-[#00FF00] text-neutral-900 px-4 py-2 rounded-md text-sm font-medium hover:bg-[#00CC00] transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-[#00FF00] focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-neutral-900" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:text-[#00FF00] block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#innovations" class="text-gray-300 hover:text-[#00FF00] block px-3 py-2 rounded-md text-base font-medium">Innovations</a>
+                <a href="#howitworks" class="text-gray-300 hover:text-[#00FF00] block px-3 py-2 rounded-md text-base font-medium">How It Works</a>
+                <a href="#futurevision" class="text-gray-300 hover:text-[#00FF00] block px-3 py-2 rounded-md text-base font-medium">Future Vision</a>
+                <a href="#joinus" class="text-gray-300 hover:text-[#00FF00] block px-3 py-2 rounded-md text-base font-medium">Join Us</a>
+                <a href="#contact" class="bg-[#00FF00] text-neutral-900 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Add scroll event listener for navbar background
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</div>
+</htmlCode></element><element id="3545386d-dbd5-4070-b431-8afe3c8a07ad" data-section-id="3545386d-dbd5-4070-b431-8afe3c8a07ad">
+
+<htmlCode>
+<div id="root">
+    <section id="hero" class="relative min-h-screen bg-neutral-900 flex items-center justify-center overflow-hidden">
+        <!-- Video Background with Fallback -->
+        <div class="absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/70 to-neutral-900/90 z-10"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBmZjAwMTAiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20 z-0"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-20 container mx-auto px-4 text-center">
+            <h1 class="animate__animated animate__fadeIn text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-montserrat">
+                Shaping the Future of 
+                <span class="text-[#00FF00] inline-block">AR/VR</span>
+            </h1>
+            
+            <p class="animate__animated animate__fadeIn animate__delay-1s text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-montserrat font-medium">
+                Innovative hardware and software solutions designed to redefine immersive experiences.
+            </p>
+            
+            <div class="animate__animated animate__fadeIn animate__delay-2s">
+                <a href="#innovations" class="inline-block px-8 py-4 text-lg font-bold text-neutral-900 bg-[#00FF00] rounded-full hover:bg-[#00FF00]/90 transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(0,255,0,0.3)] hover:shadow-[0_0_30px_rgba(0,255,0,0.5)]">
+                    Explore the Future
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-6 h-6 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+            <div class="floating-element absolute top-1/4 left-1/4 w-24 h-24 border border-[#00FF00]/20 rounded-full"></div>
+            <div class="floating-element absolute bottom-1/4 right-1/4 w-32 h-32 border border-[#00FF00]/20 rounded-full"></div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(20px, 20px) rotate(180deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        .floating-element {
+            animation: float 15s infinite ease-in-out;
+        }
+    </style>
+
+    <script>
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('#hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</div>
+</htmlCode></element><element id="62e0f356-4d77-4365-bb05-7e008f91fe67" data-section-id="62e0f356-4d77-4365-bb05-7e008f91fe67">
+
+<htmlCode>
+<div id="root">
+    <section id="about" class="relative py-24 bg-neutral-800">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwZmYwMDEwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-10"></div>
+
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Content Column -->
+                    <div class="animate__animated animate__fadeInLeft">
+                        <h2 class="text-4xl font-bold text-white mb-6 font-montserrat">
+                            About <span class="text-[#00FF00]">GenX Reality</span>
+                        </h2>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            We are a passionate team of innovators, developers, and visionaries dedicated to pushing the boundaries of what's possible in augmented and virtual reality. Our commitment to excellence drives us to create groundbreaking solutions that transform how people interact with digital worlds.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-[#00FF00]/10 flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold">Innovation First</h3>
+                                    <p class="text-gray-400">Pushing technological boundaries</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-[#00FF00]/10 flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold">Expert Team</h3>
+                                    <p class="text-gray-400">Industry leading professionals</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="inline-block px-8 py-3 text-[#00FF00] border-2 border-[#00FF00] rounded-full hover:bg-[#00FF00] hover:text-neutral-900 transition-all duration-300 font-semibold">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Stats Column -->
+                    <div class="animate__animated animate__fadeInRight">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-neutral-900/50 p-6 rounded-xl backdrop-blur-sm border border-[#00FF00]/10 hover:border-[#00FF00]/30 transition-all duration-300">
+                                <div class="text-[#00FF00] text-4xl font-bold mb-2">5+</div>
+                                <div class="text-white">Years Experience</div>
+                            </div>
+                            <div class="bg-neutral-900/50 p-6 rounded-xl backdrop-blur-sm border border-[#00FF00]/10 hover:border-[#00FF00]/30 transition-all duration-300">
+                                <div class="text-[#00FF00] text-4xl font-bold mb-2">50+</div>
+                                <div class="text-white">Projects Completed</div>
+                            </div>
+                            <div class="bg-neutral-900/50 p-6 rounded-xl backdrop-blur-sm border border-[#00FF00]/10 hover:border-[#00FF00]/30 transition-all duration-300">
+                                <div class="text-[#00FF00] text-4xl font-bold mb-2">100+</div>
+                                <div class="text-white">Happy Clients</div>
+                            </div>
+                            <div class="bg-neutral-900/50 p-6 rounded-xl backdrop-blur-sm border border-[#00FF00]/10 hover:border-[#00FF00]/30 transition-all duration-300">
+                                <div class="text-[#00FF00] text-4xl font-bold mb-2">25+</div>
+                                <div class="text-white">Team Members</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="31104c94-d88d-4388-b3c0-5b4bc1e1e429" data-section-id="31104c94-d88d-4388-b3c0-5b4bc1e1e429">
+
+<htmlCode>
+<div id="root">
+    <section id="innovations" class="py-24 bg-neutral-900 relative overflow-hidden">
+        <!-- Background Grid -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwZmYwMDEwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-5"></div>
+
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-montserrat animate__animated animate__fadeIn">
+                    Our <span class="text-[#00FF00]">Innovations</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Pushing the boundaries of reality with cutting-edge technology and immersive experiences.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Hardware Card -->
+                <div class="group relative bg-neutral-800 rounded-2xl p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,0,0.2)] animate__animated animate__fadeInLeft">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#00FF00]/0 to-[#00FF00]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative">
+                        <div class="h-48 bg-neutral-900 rounded-xl mb-6 overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center text-[#00FF00]">
+                                <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Cutting-Edge AR/VR Hardware</h3>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                4K Per-eye Resolution
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                120Hz Refresh Rate
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Advanced Haptic Feedback
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Software Card -->
+                <div class="group relative bg-neutral-800 rounded-2xl p-6 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,0,0.2)] animate__animated animate__fadeInRight">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#00FF00]/0 to-[#00FF00]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative">
+                        <div class="h-48 bg-neutral-900 rounded-xl mb-6 overflow-hidden">
+                            <div class="w-full h-full flex items-center justify-center text-[#00FF00]">
+                                <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Revolutionary Software Integration</h3>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                AI-Powered Environment Mapping
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Real-time Physics Engine
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Cross-platform Compatibility
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-16 animate__animated animate__fadeIn">
+                <a href="#contact" class="inline-block px-8 py-4 bg-[#00FF00] text-neutral-900 rounded-full font-bold hover:bg-[#00FF00]/90 transition-all duration-300 transform hover:scale-105">
+                    Check Demo
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="0a56b5b2-6b28-42d2-8c8d-efff4f83a524" data-section-id="0a56b5b2-6b28-42d2-8c8d-efff4f83a524">
+
+<htmlCode>
+<div id="root">
+    <section id="howitworks" class="py-24 bg-neutral-800 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-montserrat animate__animated animate__fadeIn">
+                    How It <span class="text-[#00FF00]">Works</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Experience our seamless integration of hardware and software
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto relative">
+                <!-- Flowchart -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative animate__animated animate__fadeIn">
+                    <!-- Connection Lines (Desktop Only) -->
+                    <div class="hidden md:block absolute w-full h-2 top-1/2 left-0 transform -translate-y-1/2">
+                        <div class="h-full bg-gradient-to-r from-[#00FF00]/20 via-[#00FF00] to-[#00FF00]/20 animate-pulse"></div>
+                    </div>
+
+                    <!-- Hardware Node -->
+                    <div class="relative group w-full md:w-1/3">
+                        <div class="bg-neutral-900 p-6 rounded-xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 cursor-pointer">
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto bg-[#00FF00]/10 rounded-full flex items-center justify-center mb-4">
+                                    <svg class="w-8 h-8 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Hardware</h3>
+                                <p class="text-gray-400">State-of-the-art VR headset with haptic feedback</p>
+                            </div>
+                            <!-- Tooltip -->
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-[#00FF00] text-neutral-900 p-2 rounded text-sm whitespace-nowrap">
+                                4K Resolution & 120Hz Refresh Rate
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software Node -->
+                    <div class="relative group w-full md:w-1/3">
+                        <div class="bg-neutral-900 p-6 rounded-xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 cursor-pointer">
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto bg-[#00FF00]/10 rounded-full flex items-center justify-center mb-4">
+                                    <svg class="w-8 h-8 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Software</h3>
+                                <p class="text-gray-400">AI-powered environment mapping and physics</p>
+                            </div>
+                            <!-- Tooltip -->
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-[#00FF00] text-neutral-900 p-2 rounded text-sm whitespace-nowrap">
+                                Real-time Processing & Updates
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Experience Node -->
+                    <div class="relative group w-full md:w-1/3">
+                        <div class="bg-neutral-900 p-6 rounded-xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 cursor-pointer">
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto bg-[#00FF00]/10 rounded-full flex items-center justify-center mb-4">
+                                    <svg class="w-8 h-8 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">User Experience</h3>
+                                <p class="text-gray-400">Immersive and intuitive interaction</p>
+                            </div>
+                            <!-- Tooltip -->
+                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-[#00FF00] text-neutral-900 p-2 rounded text-sm whitespace-nowrap">
+                                Seamless Integration & Control
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learn More Button -->
+                <div class="text-center mt-16">
+                    <a href="#contact" class="inline-block px-8 py-4 bg-transparent border-2 border-[#00FF00] text-[#00FF00] rounded-full font-bold hover:bg-[#00FF00] hover:text-neutral-900 transition-all duration-300 transform hover:scale-105">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeIn');
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('#howitworks .animate__animated').forEach((el) => {
+            el.style.opacity = 0;
+            observer.observe(el);
+        });
+    </script>
+</div>
+</htmlCode></element><element id="225702f4-3b81-4fa0-a6ae-0da0a11df959" data-section-id="225702f4-3b81-4fa0-a6ae-0da0a11df959">
+
+<htmlCode>
+<div id="root">
+    <section id="futurevision" class="py-24 bg-neutral-900 relative overflow-hidden">
+        <!-- Animated Background Grid -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwZmYwMDEwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-5"></div>
+
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-montserrat animate__animated animate__fadeIn">
+                    Future <span class="text-[#00FF00]">Vision</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Our roadmap to revolutionizing the AR/VR landscape
+                </p>
+            </div>
+
+            <!-- Timeline Grid -->
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                <!-- 2024 Milestone -->
+                <div class="relative group animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-800 p-8 rounded-xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,0,0.2)]">
+                        <div class="text-[#00FF00] text-2xl font-bold mb-4">2024</div>
+                        <h3 class="text-white text-xl font-bold mb-4">Market Launch</h3>
+                        <ul class="text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Initial Hardware Release
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Beta Software Platform
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2025 Milestone -->
+                <div class="relative group animate__animated animate__fadeIn" style="animation-delay: 0.2s">
+                    <div class="bg-neutral-800 p-8 rounded-xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,0,0.2)]">
+                        <div class="text-[#00FF00] text-2xl font-bold mb-4">2025</div>
+                        <h3 class="text-white text-xl font-bold mb-4">Global Expansion</h3>
+                        <ul class="text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                International Markets
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Enterprise Solutions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2026 Milestone -->
+                <div class="relative group animate__animated animate__fadeInRight" style="animation-delay: 0.4s">
+                    <div class="bg-neutral-800 p-8 rounded-xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,0,0.2)]">
+                        <div class="text-[#00FF00] text-2xl font-bold mb-4">2026</div>
+                        <h3 class="text-white text-xl font-bold mb-4">Next Generation</h3>
+                        <ul class="text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                8K Resolution Support
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-[#00FF00] mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                Neural Interface Integration
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="max-w-xl mx-auto mt-20 p-8 bg-neutral-800 rounded-xl border border-[#00FF00]/20 animate__animated animate__fadeIn" style="animation-delay: 0.6s">
+                <h3 class="text-white text-2xl font-bold mb-4 text-center">Stay Updated</h3>
+                <p class="text-gray-400 mb-6 text-center">Join our newsletter to receive the latest updates and announcements</p>
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 bg-neutral-900 border border-[#00FF00]/20 rounded-lg text-white focus:outline-none focus:border-[#00FF00] transition-colors">
+                    <button type="submit" class="px-8 py-3 bg-[#00FF00] text-neutral-900 rounded-lg font-bold hover:bg-[#00FF00]/90 transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated');
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('#futurevision .animate__animated').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</div>
+</htmlCode></element><element id="6b20fa10-e3bc-4fe2-b448-6d856d777689" data-section-id="6b20fa10-e3bc-4fe2-b448-6d856d777689">
+
+<htmlCode>
+<div id="root">
+    <section id="joinus" class="py-24 relative overflow-hidden">
+        <!-- Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900"></div>
+        
+        <!-- Animated Grid Overlay -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwZmYwMDEwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-5"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-montserrat animate__animated animate__fadeIn">
+                    Join Our <span class="text-[#00FF00]">Vision</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Be part of the next generation of immersive technology
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Invest Card -->
+                <div class="group animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-800/50 backdrop-blur-sm p-8 rounded-2xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,0,0.2)]">
+                        <div class="w-16 h-16 bg-[#00FF00]/10 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Invest in GenX</h3>
+                        <p class="text-gray-300 mb-6">Join our investment community and be part of shaping the future of AR/VR technology. Early investors get exclusive access to prototype testing and development insights.</p>
+                        <button class="w-full py-4 bg-gradient-to-r from-[#00FF00] to-[#00CC00] text-neutral-900 rounded-xl font-bold hover:shadow-lg hover:shadow-[#00FF00]/20 transition-all duration-300 transform hover:scale-105">
+                            Become an Investor
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Develop Card -->
+                <div class="group animate__animated animate__fadeInRight">
+                    <div class="bg-neutral-800/50 backdrop-blur-sm p-8 rounded-2xl border border-[#00FF00]/20 hover:border-[#00FF00] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,0,0.2)]">
+                        <div class="w-16 h-16 bg-[#00FF00]/10 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-[#00FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Develop with Us</h3>
+                        <p class="text-gray-300 mb-6">Are you a developer passionate about AR/VR? Join our team and work with cutting-edge technology to create immersive experiences that push boundaries.</p>
+                        <button class="w-full py-4 bg-gradient-to-r from-[#00CC00] to-[#00FF00] text-neutral-900 rounded-xl font-bold hover:shadow-lg hover:shadow-[#00FF00]/20 transition-all duration-300 transform hover:scale-105">
+                            Join Development Team
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="mt-16 text-center">
+                <p class="text-[#00FF00] font-bold mb-8">Why Join Us?</p>
+                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="animate__animated animate__fadeIn" style="animation-delay: 0.2s">
+                        <div class="text-white text-lg font-bold mb-2">Innovation First</div>
+                        <p class="text-gray-400">Access to latest AR/VR tech</p>
+                    </div>
+                    <div class="animate__animated animate__fadeIn" style="animation-delay: 0.4s">
+                        <div class="text-white text-lg font-bold mb-2">Global Impact</div>
+                        <p class="text-gray-400">Shape the future of technology</p>
+                    </div>
+                    <div class="animate__animated animate__fadeIn" style="animation-delay: 0.6s">
+                        <div class="text-white text-lg font-bold mb-2">Growth Potential</div>
+                        <p class="text-gray-400">Unlimited learning opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated');
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('#joinus .animate__animated').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</div>
+</htmlCode></element><element id="a7cffa47-8404-4793-8195-3ae628c02779" data-section-id="a7cffa47-8404-4793-8195-3ae628c02779">
+
+<htmlCode>
+<div id="root">
+    <section id="contact" class="py-24 bg-neutral-800 relative">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwZmYwMDEwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-5"></div>
+
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-montserrat animate__animated animate__fadeIn">
+                    Get in <span class="text-[#00FF00]">Touch</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    Have questions? We'd love to hear from you.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="animate__animated animate__fadeInLeft">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-white mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-neutral-900 border border-[#00FF00]/20 rounded-lg text-white focus:outline-none focus:border-[#00FF00] transition-colors" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-neutral-900 border border-[#00FF00]/20 rounded-lg text-white focus:outline-none focus:border-[#00FF00] transition-colors" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-white mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-neutral-900 border border-[#00FF00]/20 rounded-lg text-white focus:outline-none focus:border-[#00FF00] transition-colors" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-[#00FF00] text-neutral-900 rounded-lg font-bold hover:bg-[#00FF00]/90 transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="animate__animated animate__fadeInRight">
+                    <div class="bg-neutral-900/50 p-8 rounded-2xl border border-[#00FF00]/20">
+                        <h3 class="text-2xl font-bold text-white mb-6">Connect With Us</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-[#00FF00] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Location</h4>
+                                    <p class="text-gray-400">Silicon Valley, CA 94025</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-[#00FF00] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1">Email</h4>
+                                    <p class="text-gray-400">contact@genxreality.com</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-[#00FF00]/20">
+                                <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center text-[#00FF00] hover:bg-[#00FF00] hover:text-neutral-900 transition-colors">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center text-[#00FF00] hover:bg-[#00FF00] hover:text-neutral-900 transition-colors">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Form validation and submission handling
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form submission logic here
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated');
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('#contact .animate__animated').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</div>
+</htmlCode></element><element id="36759ff7-a6ce-412b-b05d-6b511103c058" data-section-id="36759ff7-a6ce-412b-b05d-6b511103c058">
+
+<htmlCode>
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="animate__animated animate__fadeIn">
+                    <h3 class="text-[#00FF00] font-bold text-xl mb-4">GenX Reality</h3>
+                    <p class="text-gray-400 mb-4">Shaping the future of immersive experiences through cutting-edge AR/VR technology.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#00FF00] transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FF00] transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="animate__animated animate__fadeIn" style="animation-delay: 0.2s">
+                    <h3 class="text-white font-bold text-xl mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-[#00FF00] transition-colors">About Us</a></li>
+                        <li><a href="#innovations" class="text-gray-400 hover:text-[#00FF00] transition-colors">Innovations</a></li>
+                        <li><a href="#howitworks" class="text-gray-400 hover:text-[#00FF00] transition-colors">How It Works</a></li>
+                        <li><a href="#futurevision" class="text-gray-400 hover:text-[#00FF00] transition-colors">Future Vision</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="animate__animated animate__fadeIn" style="animation-delay: 0.4s">
+                    <h3 class="text-white font-bold text-xl mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="text-gray-400 hover:text-[#00FF00] transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#00FF00] transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#00FF00] transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#00FF00] transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="animate__animated animate__fadeIn" style="animation-delay: 0.6s">
+                    <h3 class="text-white font-bold text-xl mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest developments</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 bg-neutral-800 border border-[#00FF00]/20 rounded-l-lg text-white focus:outline-none focus:border-[#00FF00] transition-colors">
+                        <button type="submit" class="px-4 py-2 bg-[#00FF00] text-neutral-900 rounded-r-lg font-bold hover:bg-[#00FF00]/90 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-neutral-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">© 2024 GenX Reality. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-[#00FF00] text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FF00] text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-[#00FF00] text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated');
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('#footer .animate__animated').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
